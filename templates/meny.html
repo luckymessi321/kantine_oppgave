@@ -3,6 +3,23 @@
 {% block title %} Meny {% endblock %}
 
 {% block content %}
-<h2>Vår meny</h2>
-<p>Placeholder text</p>
-{% endblock %}
+
+{% for dict in list %}
+
+{% if day in dict %}
+
+<h1> {{ dict[day] }} </h1>
+
+{% if dict[day] in list[1] %}
+
+<h2> {{ list[1][dict[day]][target_key] }}</h2>
+
+<h3> {{ list[1][dict[day]][target_key2] }}</h3>
+
+{% endif %}
+
+{% endif %}
+
+{% endfor %}
+
+{% endblock %} 
