@@ -3,12 +3,12 @@
 {% block title %} Varer {% endblock %}
 
 {% block content %}
-<h2>Varer</h2>
-<div>
-    <p>Pepsi Max</p>
-    <p>Pepsi</p>
-    <p>Coca Cola Zero</p>
-    <p>Coca Cola</p>
-</div>
+<div class="centered_text">
+    <h1>Varer</h1>
 
-{% endblock %}
+    {% for element in varer %}
+
+
+    <img src= {{varer[element][target_key2]}} alt="">
+    <h1>{{ element }}</h1>
+    <h2>{{ varer[element][target_key] }}</
