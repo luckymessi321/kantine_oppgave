@@ -1,4 +1,4 @@
-body {
+.centered_text {
     text-align: center;
 }
 
@@ -11,4 +11,3 @@ header {
     padding-bottom: 10px;
     background-color: #808080;
 }
-
