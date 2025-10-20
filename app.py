@@ -13,7 +13,7 @@ def meny():
                                                                                                                                                                                                                                                                "Tirsdag": {"rett": "Pizza", "beskrivelse": "Pizza med pepperoni og maur"},
                                                                                                                                                                                                                                                                "Onsdag": {"rett": "Burger", "beskrivelse": "Burger med hundekjøtt"},
                                                                                                                                                                                                                                                                "Torsdag": {"rett": "Skorpion", "beskrivelse": "Skorpion med navnet Skarner"},
-                                                                                                                                                                                                                                                               "Fredag": {"rett": "Ræv", "beskrivelse": "Ræva til moren din"}}])
+                                                                                                                                                                                                                                                              "Fredag": {"rett": "Ræv", "beskrivelse": "Ræva til moren din"}}])
 
 @app.route('/kontakt')
 def kontakt():
@@ -21,7 +21,10 @@ def kontakt():
 
 @app.route('/varer')
 def varer():
-    return render_template("varer.html")
+    return render_template("varer.html", target_key = "pris", target_key2 = "link", varer = {"Pepsi_Max":{"pris": "30 kr", "link": "static/img/pepsi_max.png"},
+                                                                                             "Pepsi": {"pris": "30 kr", "link": "static/img/pepsi.jpeg"},
+                                                                                             "Coke": {"pris": "30 kr", "link": "static/img/coke.png"},
+                                                                                             "Coke_Zero": {"pris": "30 kr", "link": "static/img/coke_zero.png"}})
 
 if __name__ == "__main__":
     app.run()
