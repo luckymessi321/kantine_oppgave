@@ -8,11 +8,12 @@
 
     {% for element in varer %}
 
+    <img src={{varer[element][target_key2]}} alt="">
 
-    <img src= {{varer[element][target_key2]}} alt="">
-    <h1>{{ element }}</h1>
-    <h2>{{ varer[element][target_key] }}</h2>
+    {% endfor %}
+    {% for element in varer %}
 
+    <h1>{{ element }}: {{ varer[element][target_key] }}</h1>
 
     {% endfor %}
 </div>
