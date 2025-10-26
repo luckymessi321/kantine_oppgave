@@ -7,14 +7,10 @@
     <h1>Varer</h1>
 
     {% for element in varer %}
-
     <img src={{varer[element][target_key2]}} alt="">
 
     {% endfor %}
+    <br>
     {% for element in varer %}
 
-    <h1>{{ element }}: {{ varer[element][target_key] }}</h1>
-
-    {% endfor %}
-</div>
-{% endblock %}
+    <h1>{{ element }}: {{ varer[element][target_key] }}<

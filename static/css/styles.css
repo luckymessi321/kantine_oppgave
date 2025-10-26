@@ -27,12 +27,25 @@ body {
     flex-grow: 1;
 }
 
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+}
+
 footer {
     font-size: 30px;
     padding-top: 10px;
     background-color: #808080;
 }
 
+.index_overskrift {
+    font-size: x-large;
+}
+
+.index_content {
+    font-size: medium;
+}
 
 .overskrift {
     font-size: x-large;

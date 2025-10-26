@@ -21,10 +21,10 @@ def kontakt():
 
 @app.route('/varer')
 def varer():
-    return render_template("varer.html", target_key = "pris", target_key2 = "link", varer = {"Pepsi_Max":{"pris": "30 kr", "link": "static/img/pepsi_max.png"},
-                                                                                             "Pepsi": {"pris": "30 kr", "link": "static/img/pepsi.jpeg"},
+    return render_template("varer.html", target_key = "pris", target_key2 = "link", varer = {"Pepsi Max":{"pris": "30 kr", "link": "static/img/pepsi_max.png"},
+                                                                                             "Pepsi": {"pris": "30 kr", "link": "static/img/pepsi.png"},
                                                                                              "Coke": {"pris": "30 kr", "link": "static/img/coke.png"},
-                                                                                             "Coke_Zero": {"pris": "30 kr", "link": "static/img/coke_zero.png"}})
+                                                                                             "Coke Zero": {"pris": "30 kr", "link": "static/img/coke_zero.png"}})
 
 if __name__ == "__main__":
     app.run()

@@ -3,34 +3,34 @@
 {% block title %} Meny {% endblock %}
 
 {% block content %}
+<div class="centered_text">
+    {% for dict in list %}
 
-{% for dict in list %}
+    {% if day in dict %}
 
-{% if day in dict %}
+    <h1> {{ dict[day] }} </h1>
 
-<h1> {{ dict[day] }} </h1>
+    {% if dict[day] in list[1] %}
+    <h2> Dagens rett: {{ list[1][dict[day]][target_key] }} </h2>
 
-{% if dict[day] in list[1] %}
-<h2> Dagens rett: {{ list[1][dict[day]][target_key] }} </h2>
+    <h3> {{ list[1][dict[day]][target_key2] }}</h3>
 
-<h3> {{ list[1][dict[day]][target_key2] }}</h3>
+    {% endif %}
 
-{% endif %}
+    {% endif %}
 
-{% endif %}
+    {% endfor %}
 
-{% endfor %}
+    <br><br><br><br>
 
-<br><br><br><br>
+    <h2>Ukens meny</h2>
 
-<h2>Ukens meny</h2>
+    {% for element in list[1] %}
 
-{% for element in list[1] %}
+    <div>
+        <h3> {{ element }}: {{ list[1].get(element).get(target_key) }} </h3>
+    </div>
 
-<div>
-    <h3> {{ element }}: {{ list[1].get(element).get(target_key) }} </h3>
+    {% endfor %}
 </div>
-
-{% endfor %}
-
 {% endblock %} 
